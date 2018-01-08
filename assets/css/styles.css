@@ -1,0 +1,44 @@
+body{
+	background-color: black;
+}
+
+form{
+	float:right;
+	position:fixed;
+	right:100px;
+	top:90px;
+}
+label{
+	color:white;
+}
+#find-birds{
+	background-color: red;
+	margin-top: 10px;
+}
+#bird-input{
+	border-radius:5px ;
+	border:1px solid red ;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color:white;
+}
+input[type=text]:focus {
+    background-color:red;
+}
+.buttonsClass{
+	border-radius:3px ;
+	border:1px solid red ;
+	background-color: red;
+	color:white;
+	margin:10px;
+}
+.item{
+	float:left;
+	margin:10px;
+	width:400px;
+}
+
+#rate{
+	color:white;
+	font-size: 15px;
+}

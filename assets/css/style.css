@@ -1,0 +1,52 @@
+body{
+	background-image: url("../images/turntablebg.jpg");
+}
+
+.djenerate{
+	color:white;
+}
+
+h1{ 
+    font-size:70px;   
+}
+
+form{
+	float:right;
+	position:fixed;
+	right:100px;
+	top:90px;
+}
+label{
+	color:white;
+}
+#find-dj{
+	background-color: grey;
+	margin-top: 10px;
+}
+#dj-input{
+	border-radius:5px ;
+	border:1px solid black   ;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color:white;
+}
+input[type=text]:focus {
+    background-color:black;
+}
+.buttonsClass{
+	border-radius:3px ;
+	border:1px solid black ;
+	background-color: grey;
+	color:white;
+	margin:10px;
+}
+.item{
+	float:left;
+	margin:10px;
+	width:400px;
+}
+
+#rate{
+	color:white;
+	font-size: 15px;
+}
