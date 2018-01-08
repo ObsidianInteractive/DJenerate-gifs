@@ -4,6 +4,7 @@ $(document).ready(function() {
 renderButtons();
 	function renderButtons(){
 
+    // create and appends new button
 		$("#buttons-view").empty();
 		for(var i=0;i<topics.length;i++){
 		var newButton=$("<button>");
@@ -13,18 +14,17 @@ renderButtons();
 		$("#buttons-view").append(newButton);
 	}
 
-	}
-
+  }
+  
 $("#find-dj").on("click",function(){
 	event.preventDefault();	
 	var djStuff=$("#dj-input").val();
-	console.log(djStuff);
 	topics.push(djStuff);	
-	console.log(topics);
 	renderButtons();
       click();
 });
 
+// Makes AJAX call and appends gif. 
 function click(){
 	var form=document.getElementById("#dj-form")
        form.reset();
@@ -32,7 +32,6 @@ function click(){
 
 $(document).on("click","button",function(){
 	var clubstuff = $(this).attr("data");
-	console.log(clubstuff);
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         clubstuff + "&api_key=dc6zaTOxFJmzC&limit=10";
 
@@ -41,7 +40,7 @@ $(document).on("click","button",function(){
           method: "GET"
         }).done(function(response) {
            var results = response.data;
-           console.log(results);
+     
            $("#gif-image-view").empty();
           for (var i = 0; i < results.length; i++) {
             var gifDiv = $("<div class='item'>");
@@ -59,14 +58,11 @@ $(document).on("click","button",function(){
           }
         });
     });
-//renderButtons();
+// Plays and pauses GIFs
 $(document).on("click",".gifClass", function() {
-      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+   
       var state = $(this).attr("data-state");
-      console.log(state);
-      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-      // Then, set the image's data-state to animate
-      // Else set src to the data-still value
+ 
       if (state === "still") {
         $(this).delay("fast").attr("src", $(this).attr("data-animate"));
         $(this).delay("fast").attr("data-state", "animate");
