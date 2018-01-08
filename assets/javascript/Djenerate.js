@@ -1,4 +1,4 @@
-var topics=["hip hop","rave","dancefloor","turntables","party"];
+var topics=["dance","party","rave","music","drinks"];
 
 $(document).ready(function() {
 renderButtons();
